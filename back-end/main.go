@@ -24,6 +24,8 @@ func main() {
 
 	// ROUTES
 	r.POST("/admin/register", auth.RegisterAdmin)
+	r.POST("/user/register", auth.RegisterUser)
+	r.POST("/login", auth.Login)
 
 	// run the server
 	r.Run(":8080")
