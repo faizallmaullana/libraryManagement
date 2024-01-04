@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/faizallmaullana/libraryManagement/controllers/auth"
 	"github.com/faizallmaullana/libraryManagement/models"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
@@ -22,6 +23,7 @@ func main() {
 	r.Use(cors.New(corsConfig))
 
 	// ROUTES
+	r.POST("/admin/register", auth.RegisterAdmin)
 
 	// run the server
 	r.Run(":8080")

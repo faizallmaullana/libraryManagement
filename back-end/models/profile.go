@@ -19,6 +19,7 @@ type Profile struct {
 	Address   string    `json:"address"`
 	Birthdate time.Time `json:"birthdate"`
 
+	// Foreign Keys
 	ID_User string `json:"id_user"`
 	Users   Users  `json:"users" gorm:"foreign_key:ID_User"`
 }
