@@ -27,7 +27,7 @@ type Borrowing struct {
 
 	// foreign keys
 	ID_Profile string  `json:"id_profile"`
-	Profile    Profile `json:"profile" gorm:"foreignKey:ID_Profile`
+	Profile    Profile `json:"profile" gorm:"foreignKey:ID_Profile"`
 	ID_Book    string  `json:"id_book"`
 	Books      Books   `json:"books" gorm:"foreignKey:ID_Book"`
 
