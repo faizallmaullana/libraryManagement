@@ -21,5 +21,5 @@ type Profile struct {
 
 	// Foreign Keys
 	ID_User string `json:"id_user"`
-	Users   Users  `json:"users" gorm:"foreign_key:ID_User"`
+	Users   Users  `json:"users" gorm:"foreignKey:ID_User"`
 }

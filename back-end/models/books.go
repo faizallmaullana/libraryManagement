@@ -11,7 +11,7 @@ type Books struct {
 	Publisher string `json:"publisher"`
 	Year      string `json:"year"`
 	Quantity  int    `json:"quantity"`
-	Image     []byte `json:"image"`
+	Image     []byte `json:"-"`
 
 	CreatedAt time.Time `json:"created_at"`
 	IsDeleted bool      `json:"is_deleted"`

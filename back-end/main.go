@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/faizallmaullana/libraryManagement/controllers/auth"
+	"github.com/faizallmaullana/libraryManagement/controllers/profile"
 	"github.com/faizallmaullana/libraryManagement/models"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
@@ -27,6 +28,9 @@ func main() {
 	r.POST("/user/register", auth.RegisterUser)
 	r.POST("/login", auth.Login)
 
+	// profile
+	r.GET("/profile/:id", profile.GetProfile)
+
 	// run the server
-	r.Run(":8080")
+	r.Run(":9888")
 }
